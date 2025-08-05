@@ -11,15 +11,15 @@ import Routes from './shared/routes';
 import theme from './shared/styles/theme';
 
 function App() {
-    return (
-        <ChakraProvider theme={theme} resetCSS={true}>
-            <BrowserRouter>
-                <LayoutDefault>
-                    <Routes />
-                </LayoutDefault>
-            </BrowserRouter>
-        </ChakraProvider>
-    );
+  return (
+    <ChakraProvider theme={theme} resetCSS={true}>
+      <BrowserRouter>
+        <LayoutDefault>
+          <Routes />
+        </LayoutDefault>
+      </BrowserRouter>
+    </ChakraProvider>
+  );
 }
 
 export default App;

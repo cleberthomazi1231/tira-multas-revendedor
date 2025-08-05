@@ -1,11 +1,7 @@
 {
   "root": true,
   "parser": "@typescript-eslint/parser",
-  "plugins": [
-    "@typescript-eslint",
-    "prettier",
-    "eslint-plugin-import-helpers"
-  ], 
+  "plugins": ["@typescript-eslint", "prettier", "eslint-plugin-import-helpers"],
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
@@ -14,34 +10,33 @@
   "rules": {
     "prettier/prettier": "error",
     "no-console": "off",
-    "no-prototype-builtins": "off", 
-    "@typescript-eslint/no-explicit-any": "off", 
+    "no-prototype-builtins": "off",
+    "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/no-unused-vars": [
       "error",
       {
         "argsIgnorePattern": "_"
       }
-    ],  
+    ],
     "import-helpers/order-imports": [
       "warn",
       {
         "newlinesBetween": "always", // new line between groups
-        "groups": [ 
+        "groups": [
           "module",
-          "/^@server\/shared/",
+          "/^@server/shared/",
           "/^@/",
           ["parent", "sibling", "index"]
         ],
         "alphabetize": { "order": "asc", "ignoreCase": true }
-      } 
+      }
     ]
   },
   "settings": {
     "import/resolver": {
-      "typescript": { 
+      "typescript": {
         "project": "./tsconfig.json"
-      }  
-    }   
+      }
+    }
   }
 }
-  

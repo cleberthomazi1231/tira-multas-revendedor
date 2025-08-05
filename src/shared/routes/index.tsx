@@ -9,32 +9,29 @@ import LayoutPanel from '../components/Layout/LayoutPanel';
 import Dashboard from '../pages/Dashboard';
 
 const Routes: React.FC = () => (
-    <RoutesDOM>
-        <Route path="/" element={<LayoutPanel component={<LoginPage />} />} />
-        <Route
-            path="/login"
-            element={<LayoutPanel component={<LoginPage />} />}
-        />
-        <Route
-            path="/dashboard"
-            element={<LayoutPanel component={<Dashboard />} />}
-        />
+  <RoutesDOM>
+    <Route path="/" element={<LayoutPanel component={<LoginPage />} />} />
+    <Route path="/login" element={<LayoutPanel component={<LoginPage />} />} />
+    <Route
+      path="/dashboard"
+      element={<LayoutPanel component={<Dashboard />} />}
+    />
 
-        <Route
-            path="/produtos"
-            element={<LayoutPanel component={<ProductsListPage />} />}
-        />
+    <Route
+      path="/produtos"
+      element={<LayoutPanel component={<ProductsListPage />} />}
+    />
 
-        <Route
-            path="/vendas"
-            element={<LayoutPanel component={<OrdersListPage />} />}
-        />
+    <Route
+      path="/vendas"
+      element={<LayoutPanel component={<OrdersListPage />} />}
+    />
 
-        <Route
-            path="/vendas/nova"
-            element={<LayoutPanel component={<OrdersRegisterPage />} />}
-        />
-    </RoutesDOM>
+    <Route
+      path="/vendas/nova"
+      element={<LayoutPanel component={<OrdersRegisterPage />} />}
+    />
+  </RoutesDOM>
 );
 
 export default Routes;
